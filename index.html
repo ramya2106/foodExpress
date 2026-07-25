@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+}
+
+/* Fixed Navigation */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#ff5722;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* Hero Section */
+
+.hero{
+    position:relative;
+    margin-top:80px;
+    height:500px;
+    background:linear-gradient(to right,#ff9800,#ff5722);
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero-text h1{
+    font-size:50px;
+}
+
+.hero-text p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#ff5722;
+    padding:15px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    animation:pulse 1.5s infinite;
+}
+
+.hero img{
+    width:350px;
+    animation:float 3s ease-in-out infinite;
+}
+
+/* Animation */
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+/* Food Section */
+
+.section-title{
+    text-align:center;
+    margin:60px 0 30px;
+    font-size:35px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    position:relative;
+    width:300px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#ff5722;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Absolute Position */
+
+.badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:red;
+    color:white;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:14px;
+}
+/* Sticky Offer Bar */
+.sticky-offer{
+    position: sticky;
+    top: 80px; /* Below the fixed header */
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 999;
+}
+/* About */
+
+.about{
+    padding:60px;
+    text-align:center;
+    background:white;
+}
+
+.about h2{
+    margin-bottom:20px;
+}
+
+.about ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+.about li{
+    margin:10px;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    height:auto;
+    padding:40px 20px;
+}
+
+.hero img{
+    width:250px;
+    margin-top:20px;
+}
+
+.hero-text h1{
+    font-size:35px;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🍔 FoodExpress</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Menu</a>
+<a href="#">Offers</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Fresh Food Delivered</h1>
+
+<p>Order your favourite meals in just 30 minutes.</p>
+
+<a href="#" class="btn">Order Now</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Burger">
+
+</section>
+
+<div class="sticky-offer">
+    🎉 Today's Offer: Get 30% OFF on all Pizza Orders! 🍕
+</div>
+<h2 class="section-title">Popular Foods</h2>
+
+<section class="cards">
+
+<div class="card">
+
+<div class="badge">20% OFF</div>
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" alt="Pizza">
+
+<div class="card-content">
+
+<h3>Veg Pizza</h3>
+
+<p>Cheesy pizza with fresh vegetables.</p>
+
+<p class="price">$12</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="badge">15% OFF</div>
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500" alt="Burger">
+
+<div class="card-content">
+
+<h3>Cheese Burger</h3>
+
+<p>Juicy burger with crispy fries.</p>
+
+<p class="price">$10</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="badge">25% OFF</div>
+
+<img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500" alt="Pasta">
+
+<div class="card-content">
+
+<h3>Italian Pasta</h3>
+
+<p>Creamy white sauce pasta.</p>
+
+<p class="price">$15</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about">
+
+<h2>Why Choose Us?</h2>
+
+<ul>
+<li>🚀 Fast Delivery</li>
+<li>🍽️ Fresh & Hygienic Food</li>
+<li>💰 Affordable Prices</li>
+<li>⭐ 24/7 Customer Support</li>
+</ul>
+
+</section>
+
+<footer>
+
+<p>© 2026 FoodExpress | Designed for HTML & CSS Hands-on</p>
+
+</footer>
+
+</body>
+</html>
