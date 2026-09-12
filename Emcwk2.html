@@ -1,0 +1,222 @@
+<html>
+    <head>
+        <title>Food Express</title>
+        <style>
+            *{
+                margin:0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background: #f8f8f8;
+            }
+            header{
+                position: fixed;
+                width: 100%;
+                top: 0px;
+                background: #ff5722;
+                color: white;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                padding: 15px 50px;
+                z-index: 1000;
+            }
+            .hero {
+                height: 500px;
+                margin-top: 80px;
+                /* background: orange; */
+                background: linear-gradient(to right,#ff9800,#ff5722);
+                color: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .hero-text h1{
+                font-size: 50px
+            }
+             .hero-text p{
+                margin: 20px 0;
+                font-size: 20px
+            }
+            .btn{
+                background: white;
+                color: #ff5722;
+                padding: 15px 30px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .sticky-offer{
+                position: sticky;
+                top:80px;
+                background: #4CAF50;
+                padding:15px;
+                font-size: 20px;
+                font-weight:bold;
+                text-align: center;
+                color: white;
+                z-index: 1000;
+            }
+            .section-title {
+                text-align: center;
+                margin: 60px 0 30px;
+                font-size: 35px;
+            }
+            .cards{
+                display: flex;
+                gap: 25px;
+                padding: 20px;
+                justify-content: center;
+            }
+            .card{
+                position: relative;
+                width: 300px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgb(142, 142, 142);
+            }
+            .card img{
+                width: 100%;
+                height: 220px;
+            }
+            .card-content{
+                padding: 20px;
+            }
+            .card h3 {
+                margin-bottom: 10px;
+            }
+            .price {
+                color: #ff5722;
+                font-size:22px;
+                font-weight: bold;
+            }
+            .badge {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                border-radius: 20px;
+                background: red;
+                color: white;
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+            .about {
+                padding: 50px 20px;
+                text-align: center;
+            }
+            .about h2 {
+                margin-bottom: 25px;
+            }
+            .form {
+                width: 400px;
+                margin: auto;
+                background: white;
+                border-radius: 10px;
+                padding: 25px;
+            }
+            .form label {
+                display: block;
+                text-align: left;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            .form input, .form textarea{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .form textarea{
+                height: 100px;
+            }
+            .form button {
+                background: #ff5722;
+                color: white;
+                border: none;
+                padding: 10px 30px;
+                border-radius: 5px;
+                cursor: pointer
+            }
+            .form button:hover {
+                background:#8e2202;
+            }
+            footer{
+                background: #222;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h2>Food Express</h2>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="index.html">Menu</a>
+                <a href="#">Offers</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Fresh Food Delivered</h1>
+                <p>Order your favourite meals in just 30 minutes.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500">
+        </section>
+        <div class="sticky-offer">
+            Today's Offer: Get 30% OFF on all Pizza Orders!
+        </div>
+        <h2 class="section-title">Popular Foods</h2>
+        <section class="cards">
+            <div class="card">
+                <div class="badge">20% OFF</div>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500">
+                <div class="card-content">
+                    <h3>Veg Pizza</h3>
+                    <p>Cheesy pizza with fresh vegetables.</p>
+                    <p class="price">$12</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="badge">20% OFF</div>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500">
+                <div class="card-content">
+                    <h3>Veg Pizza</h3>
+                    <p>Cheesy pizza with fresh vegetables.</p>
+                    <p class="price">$12</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="badge">20% OFF</div>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500">
+                <div class="card-content">
+                    <h3>Veg Pizza</h3>
+                    <p>Cheesy pizza with fresh vegetables.</p>
+                    <p class="price">$12</p>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+        <h2>Contact Form</h2>
+        <div class="form">
+            <label>User Name</label>
+            <input type="text" placeholder="Enter your name">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your Email">
+            <label>Message</label>
+            <textarea placeholder="Enter your Message"></textarea>
+            <button>Submit</button>
+        </div>
+        </section>
+        <footer>
+            <p>&copy;2026 FoodExpress | Designed for HTML & CSS Hands on </p>
+        </footer>
+    </body>
+</html>

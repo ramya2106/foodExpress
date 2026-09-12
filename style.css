@@ -1,0 +1,398 @@
+/* =================================
+   1. BASIC RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+}
+
+
+/* =================================
+   2. HEADER - FLEXBOX
+================================= */
+
+.header {
+    background: #1e293b;
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    min-width: 300px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* =================================
+   3. DASHBOARD - GRID
+================================= */
+
+.dashboard {
+    max-width: 1200px;
+
+    min-width: 300px;
+
+    margin: 30px auto;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+
+    gap: 20px;
+}
+
+
+/* =================================
+   4. SIDEBAR
+================================= */
+
+.sidebar {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   5. WELCOME - FLEXBOX
+================================= */
+
+.welcome {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.welcome h2 {
+    margin-bottom: 8px;
+}
+
+.welcome button {
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   6. STATISTICS - GRID
+================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    min-width: 150px;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+}
+
+.stat-card p {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+/* =================================
+   7. COURSES - GRID
+================================= */
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.courses {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =================================
+   8. COURSE CARD
+================================= */
+
+.card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    min-width: 200px;
+}
+
+
+/* =================================
+   9. ASPECT RATIO + FLEXBOX
+================================= */
+
+.image {
+    background: #cbd5e1;
+
+    aspect-ratio: 16 / 9;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* Course button */
+
+.card button {
+    margin-top: 15px;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   10. UPCOMING ACTIVITIES
+================================= */
+
+.upcoming {
+    background: white;
+
+    padding: 20px;
+
+    margin-top: 30px;
+
+    border-radius: 10px;
+}
+
+.upcoming h2 {
+    margin-bottom: 15px;
+}
+
+.activity {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* =================================
+   11. TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    /* Sidebar becomes smaller */
+
+    .dashboard {
+        grid-template-columns: 150px 1fr;
+    }
+
+
+    /* Statistics */
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* Courses */
+
+    .courses {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =================================
+   12. MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard {
+        grid-template-columns: 1fr;
+
+        margin-top: 20px;
+    }
+
+
+    /* Hide sidebar on mobile */
+
+    .sidebar {
+        display: none;
+    }
+
+
+    /* Welcome */
+
+    .welcome {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    /* Statistics */
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* Courses */
+
+    .courses {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =================================
+   13. VERY SMALL SCREEN
+================================= */
+
+@media (max-width: 400px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        padding: 0 10px;
+    }
+
+}
